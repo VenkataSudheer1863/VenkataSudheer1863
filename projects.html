@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Venkata Sudheer Paruchuri</title>
+    <link rel="icon" href="PIC.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="home-button">
+        <img src="PIC.jpg" alt="Profile" />
+        <span>Venkata Sudheer Paruchuri</span>
+    </div>
+    <div class="nav-center">
+        <button onclick="location.href='index.html'">Home</button>
+        <button class="active" onclick="location.href='projects.html'">Projects</button>
+        <button onclick="location.href='research.html'">Research</button>
+        <button onclick="location.href='blogs.html'">Blogs</button>
+        <button onclick="location.href='contact.html'">Contact</button>
+    </div>
+    <div class="nav-end">
+        <a href="Sudheer_Resume.pdf" target="_blank" download class="nav-resume">Resume ↓</a>
+    </div>
+</nav>
+
+<main class="projects-container">
+    <h1>Projects</h1>
+    <span class="page-tagline">Open-source AI shipped as running code.</span>
+    <div id="project-cards" class="project-cards">
+        <div class="loading">Loading projects...</div>
+    </div>
+</main>
+
+<script>
+const username = "VenkataSudheer1863";
+
+const projects = [
+    { repo: "Agentbench-Gov",      title: "Agentbench-Gov"      },
+    { repo: "Agent_failure_atlas", title: "Agent Failure Atlas"  },
+    { repo: "RMBench",             title: "RMBench"              },
+    { repo: "Test-pilot",      title: "Test-pilot"      },
+    { repo: "AegisLLM",      title: "AegisLLM"      },
+    { repo: "RCA_Smart_Debugger",      title: "RCA_Smart_Debugger"      },
+    { repo: "meeting-steward-a2a",      title: "Meeting-steward-a2a"      },
+    { repo: "Logi",      title: "Logi"      },
+    { repo: "Codemorph",      title: "Codemorph"      },
+    { repo: "InvoiceXtractor",      title: "InvoiceXtractor"      }
+];
+
+const container = document.getElementById("project-cards");
+
+function renderProjects() {
+    container.innerHTML = "";
+    projects.forEach((project, idx) => {
+        const imageUrl = `https://opengraph.githubassets.com/1/${username}/${project.repo}`;
+        const card = document.createElement("div");
+        card.className = "project-card reveal";
+        card.style.transitionDelay = `${idx * 0.1}s`;
+        card.innerHTML = `
+            <img
+                src="${imageUrl}"
+                alt="${project.title}"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='PIC.jpg';"
+            />
+            <h3>${project.title}</h3>
+        `;
+        card.onclick = () => {
+            window.open(`https://github.com/${username}/${project.repo}`, "_blank");
+        };
+        container.appendChild(card);
+    });
+
+    // observe after render
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.06 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // 3D tilt
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width  - 0.5;
+            const y = (e.clientY - r.top)  / r.height - 0.5;
+            card.style.transform = `perspective(700px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-5px)`;
+        });
+        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", renderProjects);
+</script>
+
+</body>
+</html>

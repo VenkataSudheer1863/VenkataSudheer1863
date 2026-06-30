@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs — Venkata Sudheer Paruchuri</title>
+    <link rel="icon" href="PIC.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="home-button">
+        <img src="PIC.jpg" alt="Profile" />
+        <span>Venkata Sudheer Paruchuri</span>
+    </div>
+    <div class="nav-center">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='projects.html'">Projects</button>
+        <button onclick="location.href='research.html'">Research</button>
+        <button class="active" onclick="location.href='blogs.html'">Blogs</button>
+        <button onclick="location.href='contact.html'">Contact</button>
+    </div>
+    <div class="nav-end">
+        <a href="Sudheer_Resume.pdf" target="_blank" download class="nav-resume">Resume ↓</a>
+    </div>
+</nav>
+
+<main class="blog-container">
+    <h1>Insights & Articles</h1>
+    <span class="page-tagline">Thinking out loud at the frontier of intelligence.</span>
+    <div id="blog-cards" class="blog-cards"></div>
+</main>
+
+<script>
+const blogs = [
+    {
+        title: "𝗞𝗻𝗼𝘄𝗹𝗲𝗱𝗴𝗲 𝗚𝗿𝗮𝗽𝗵𝘀 are 𝗰𝗵𝗮𝗻𝗴ing 𝘁𝗵𝗲 𝗴𝗮𝗺𝗲.",
+        img: "https://media.licdn.com/dms/image/v2/D5622AQEmHNxP15R9GQ/feedshare-shrink_800/B56Z8RtujUKEAc-/0/1782708627959?e=1784160000&v=beta&t=F_436U-woHTNMxbxAHbw4tgwa4r5dvt0ZcRg0AeIbxo",
+        link: "https://www.linkedin.com/posts/venkata-sudheer-paruchuri-927b03248_knowledgegraphs-contextengineering-agenticai-activity-7477221934368206848-OcVS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1jXW8B2X3fSM8Oqo7u26ma5V5ydpLekdg"
+    },
+    {
+        title: "𝗧𝗵𝗲 𝗠𝗶𝘀𝘀𝗶𝗻𝗴 𝗟𝗮𝘆𝗲𝗿 𝗶𝗻 𝗔𝗴𝗲𝗻𝘁𝗶𝗰 𝗔𝗜",
+        img: "https://media.licdn.com/dms/image/v2/D5622AQHj-Qwn6XAEaA/feedshare-shrink_800/B56Z65yN10HIAc-/0/1781233409666?e=1782950400&v=beta&t=hkm2aS1_mFWL8Smrk7jAq5w0LtvusqtoL7dFKYK58aU",
+        link: "https://www.linkedin.com/posts/venkata-sudheer-paruchuri-927b03248_contextintelligence-agenticai-contextengineering-activity-7471034422130036736-9cG7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1jXW8B2X3fSM8Oqo7u26ma5V5ydpLekdg"
+    },
+        {
+        title: "𝗔𝗜 𝗚𝗼𝘃𝗲𝗿𝗻𝗮𝗻𝗰𝗲 in 𝘁𝗵𝗲 𝗖𝗼𝗻𝘁𝗲𝘅𝘁 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 𝗲𝗿𝗮.",
+        img: "https://media.licdn.com/dms/image/v2/D4D22AQGGhxFXjcLDaQ/feedshare-shrink_800/B4DZ74BBtZHQAc-/0/1782277479620?e=1784160000&v=beta&t=ZF91cr-5MBaTdeL2ePT6H_zSeMcQRqslDgsSvq8ZVgU",
+        link: "https://www.linkedin.com/posts/venkata-sudheer-paruchuri-927b03248_contextintelligence-agenticai-contextengineering-activity-7471034422130036736-9cG7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1jXW8B2X3fSM8Oqo7u26ma5V5ydpLekdg"
+    }
+];
+
+const container = document.getElementById("blog-cards");
+
+function renderBlogs() {
+    if (blogs.length === 0) {
+        container.innerHTML = `<div class="loading">No posts yet. Check back soon.</div>`;
+        return;
+    }
+    container.innerHTML = "";
+    blogs.forEach((blog, idx) => {
+        const card = document.createElement("div");
+        card.className = "blog-card reveal";
+        card.style.transitionDelay = `${idx * 0.1}s`;
+        card.innerHTML = `
+            <img
+                src="${blog.img}"
+                alt="${blog.title}"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='PIC.jpg';"
+            />
+            <h3>${blog.title}</h3>
+        `;
+        card.addEventListener("click", () => {
+            window.open(blog.link, "_blank");
+        });
+        container.appendChild(card);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.06 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // 3D tilt
+    document.querySelectorAll('.blog-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width  - 0.5;
+            const y = (e.clientY - r.top)  / r.height - 0.5;
+            card.style.transform = `perspective(700px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-5px)`;
+        });
+        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", renderBlogs);
+</script>
+
+</body>
+</html>
