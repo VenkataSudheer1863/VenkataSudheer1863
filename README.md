@@ -2,109 +2,96 @@
 
 # Venkata Sudheer Paruchuri
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=22&pause=1000&center=true&vCenter=true&width=900&lines=Researching+Intelligent+Systems;Reasoning+%7C+Agentic+AI+%7C+Context+Engineering;AI+Evaluation+and+Governance;Driven+by+Scientific+Curiosity" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=22&pause=1000&center=true&vCenter=true&width=900&lines=Building+Intelligent+Systems;Reasoning+%7C+Agentic+AI+%7C+Governance;From+Concept+to+Production;Shaping+the+Future+of+AI" />
 
 <br>
 
-*"Exploring how intelligent systems reason, adapt, and operate responsibly."*
+<p align="center">
+  <img src="https://img.shields.io/badge/AI-Reasoning-blue?style=for-the-badge&logo=brain&logoColor=white" />
+  <img src="https://img.shields.io/badge/Agentic-Systems-purple?style=for-the-badge&logo=robot&logoColor=white" />
+  <img src="https://img.shields.io/badge/AI-Governance-green?style=for-the-badge&logo=shield&logoColor=white" />
+</p>
+
+<br>
+
+*"Building intelligent systems that reason, adapt, and operate responsibly."*
 
 </div>
 
 ---
 
-My interest in AI began with a simple question : **How do intelligent systems learn, reason, and make decisions?**
-
-Today, I explore reasoning systems, agentic AI, context engineering, evaluation science, and AI governance—with a focus on understanding how intelligent systems work, where they fail, and how they can become more reliable and trustworthy.
+## 💡 About
 
 
+Specializing in **reasoning systems**, **agentic AI**, and **AI governance**. I build intelligent systems from concept to deployment—combining deep technical exploration with practical execution to create AI that is both capable and trustworthy.
 
-## Research Interests
+<br>
 
-* Agentic AI
-* Reasoning Systems
-* Context Engineering
-* AI Evaluation
-* AI Governance
-* Foundation Models
-* Multi-Agent Systems
-* Trustworthy AI
+### 🎯 Core Expertise
 
-
-
-## Questions That Drive Me
-
-* How does reasoning emerge in AI systems?
-* What makes autonomous agents reliable?
-* How can context improve intelligence?
-* How should advanced AI be evaluated?
-* Why do intelligent systems fail?
-* How can capable AI remain trustworthy and accountable?
-
-
-
-## Areas of Exploration
-
-**Reasoning** — Planning, reflection, and decision-making.
-
-**Agentic AI** — Autonomous systems, tool use, and memory.
-
-**Context Engineering** — Retrieval, memory, and context optimization.
-
-**AI Evaluation** — Reliability, robustness, and benchmarking.
-
-**AI Governance** — Safety, accountability, and transparency.
-
-**Human-AI Collaboration** — Building systems that augment human capabilities.
-
-
-
-## Research Philosophy
-
-I view research as a process of reducing uncertainty through curiosity, experimentation, and rigorous evaluation.
-
-Understanding **why systems fail** is often more valuable than understanding why they succeed.
-
-
-
-## Intellectual Themes
-
-```text
-Artificial Intelligence
-├── Reasoning
-├── Agentic Systems
-├── Context Engineering
-├── Evaluation Science
-└── AI Governance
+```yaml
+Focus Areas:
+  ├─ 🤖 Agentic AI
+  ├─ 🧠 Reasoning Systems
+  ├─ 🔧 Context Engineering
+  ├─ ✅ AI Evaluation
+  └─ 🛡️ Governance & Safety
 ```
 
+<br clear="right"/>
 
+---
 
-## Research Principles
+## 🔨 What I Do
 
-* Curiosity over assumptions
-* Evidence over intuition
-* Reproducibility over hype
-* Understanding over memorization
-* Responsibility alongside innovation
+<div align="center">
 
+| 🎨 **Design & Deploy** | 🔬 **Build & Scale** | 🎯 **Innovate & Execute** |
+|:---:|:---:|:---:|
+| Reasoning architectures & autonomous agent systems | Robust evaluation frameworks & governance mechanisms | Rigorous experimentation & evidence-driven development |
+| Complex AI challenges → reliable solutions | Intelligent systems with safety & accountability | Uncertainty reduction through measured impact |
 
+</div>
 
-## Currently Exploring
+---
 
-Reasoning Architectures • Agent Design Patterns • Context Engineering • AI Governance • Evaluation Science • Trustworthy AI • Autonomous Systems • Multi-Agent Intelligence
+## 🎯 Current Focus
 
+<div align="center">
 
+### Building the next generation of AI systems
 
-## Research Outlook
+<br>
 
-I am particularly interested in the convergence of **Reasoning**, **Agentic Intelligence**, **Context Engineering**, **Evaluation Science**, and **AI Governance**—areas that will shape the next generation of intelligent systems.
+<table>
+<tr>
+<td width="33%" align="center">
+
+### 🧠 Reasoning & Agency
+Systems that plan, reflect, and make reliable decisions
+
+</td>
+<td width="33%" align="center">
+
+### 🔧 Context Engineering
+Optimizing retrieval, memory, and information synthesis
+
+</td>
+<td width="33%" align="center">
+
+### 🛡️ Evaluation & Governance
+Ensuring AI systems are robust, safe, and accountable
+
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
 <div align="center">
 
-**Research • Reasoning • Governance • Intelligence**
-
-*"Advancing our understanding of intelligent systems."*
+## ⚡ Rigorous • Practical • Impact-Driven ⚡
 
 </div>
